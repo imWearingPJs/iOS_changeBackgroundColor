@@ -11,6 +11,7 @@ import UIKit
 class ViewController: UIViewController {
 
     @IBOutlet weak var testLabel: UILabel!
+    @IBOutlet weak var colorButton: UIButton!
     
     var count = 0
     
@@ -18,6 +19,9 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         //view.backgroundColor = UIColor.red
+        colorButton.widthAnchor.constraint(equalToConstant: 200.0).isActive = true
+        colorButton.heightAnchor.constraint(equalToConstant: 75.0).isActive = true
+        colorButton.layer.cornerRadius = 10
     }
     
     func getRandomColor() -> UIColor {
@@ -30,6 +34,7 @@ class ViewController: UIViewController {
     }
 
     @IBAction func buttonTap(_ sender: Any) {
+        
         print("Hey the button was tapped :)")
         count = count + 1
         testLabel.text = String(count)
