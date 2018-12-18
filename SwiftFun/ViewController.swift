@@ -33,9 +33,9 @@ class ViewController: UIViewController {
         print("Hey the button was tapped :)")
         count = count + 1
         testLabel.text = String(count)
-        if (count >= 10){
+        //if (count >= 10){
             view.backgroundColor = getRandomColor()
-        }
+        //}
     }
     
 }
